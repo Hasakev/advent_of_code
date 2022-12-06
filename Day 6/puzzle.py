@@ -2,8 +2,8 @@ def puzzle_solver(marker):
     file = open("Day 6\input.txt", "r")
     array = []
     line = file.read()
-    for i in range(len(line)):
-        array.append(line[i])
+    for i in line:
+        array.append(i)
         if len(array) >= marker:
             if check(array, marker):
                 file.close()
@@ -16,6 +16,5 @@ def check(array, marker):
         return True
     return False
                        
-
 print(puzzle_solver(4)) # puzzle 1 
 print(puzzle_solver(14)) # puzzle 2
