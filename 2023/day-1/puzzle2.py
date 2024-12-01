@@ -19,7 +19,8 @@ for line in lines:
         for word in dict:
             if word in string:
                 array.append(dict[word])
-                string = "" + string[-1]
+                # Reset string, keep last character for run-on numbers
+                string = "" + string[-1] 
         if char.isdigit():
             array.append(char)
         elif char.isalpha():
